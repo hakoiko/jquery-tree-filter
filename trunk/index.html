@@ -1,0 +1,141 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0, target-densitydpi=medium-dpi">
+<title>jQuery.treefilter</title>
+<link type="text/css" rel="stylesheet" href="src/jquery.treefilter.css">
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
+<style>
+	body		{background:#fff; padding:0 20px 20px 20px;}
+	.container	{font-family:"Open Sans"; font-size:16px; background:#fff; border-radius:3px;
+				border:1px solid #ddd;}
+	h1			{color:#08f; font-weight:100; font-size:44px;}
+	input		{background:transparent; font-size:16px; border:1px solid #ddd; border-width:0 0 1px 0; border-radius: 0; line-height:40px; height:40px; width:100%; outline:none;}
+	ul#my-tree	{margin:0; padding:10px 5px; color:#666;}
+	ul#my-tree	li		{margin:8px 0;}
+	div.desc	{margin:20px 0; color:#aaa; font-size:11px; text-align:left;}
+</style>
+</head>
+<body>
+	<h1>jQuery.treefilter</h1>
+	<div class="container">
+		<input type="search" id="my-search" placeholder="search">
+		<ul id="my-tree">
+			<li>
+				<div>Asia</div>
+				<ul>
+					<li>
+						<div>Southern-West</div>
+						<ul>
+							<li><div>India</div></li>
+							<li><div>Pakistan</div></li>
+							<li><div>Butan</div></li>
+						</ul>
+					</li>
+					<li><div>Southern-East</div>
+						<ul>
+							<li><div>Indonesia</div></li>
+							<li><div>Vietnam</div></li>
+							<li><div>malaysia</div></li>
+						</ul>
+					</li>
+					<li><div>Far-east</div>
+						<ul>
+							<li><div>China</div></li>
+							<li><div>North Korea</div></li>
+							<li><div>South Korea</div></li>
+							<li><div>Japan</div></li>
+						</ul>
+					</li>
+					<li><div>Central</div>
+						<ul>
+							<li><div>Mongol</div></li>
+							<li><div>kazakhstan</div></li>
+							<li><div>kyrgyzstan</div></li>
+						</ul>						
+					</li>
+				</ul>
+			</li>
+			<li><div>Antarctica</div></li>
+			<li>
+				<div>Africa</div>
+				<ul>
+					<li><div>Moroco</div></li>
+					<li><div>Egypt</div></li>
+					<li><div>Ghana</div></li>
+				</ul>
+			</li>
+			<li>
+				<div>Europe</div>
+				<ul>
+					<li><div>United Kingdom</div></li>
+					<li><div>Sweden</div></li>
+					<li><div>Germany</div></li>
+					<li><div>France</div></li>
+					<li><div>Spain</div></li>
+					<li><div>Italy</div></li>
+					<li><div>Austria</div></li>
+					<li><div>Turkey</div></li>
+					<li><div>Russia</div></li>
+					<li><div>Denmark</div></li>
+					<li><div>Finland</div></li>
+					<li><div>Iceland</div></li>
+					<li><div>Switzerland</div></li>
+					<li><div>Hungary</div></li>
+				</ul>
+			</li>
+			<li><div>Middle-east</div>
+				<ul>
+					<li><div>Saudi-Arabia</div></li>
+					<li><div>Iraq</div></li>
+					<li><div>Israel</div></li>
+					<li><div>Qatar</div></li>
+				</ul>
+			</li>
+			<li><div>North America</div>
+				<ul>
+					<li><div>USA</div></li>
+					<li><div>Canada</div></li>
+					<li><div>Mexico</div></li>
+					<li><div>Panama</div></li>
+					<li><div>Cuba</div></li>
+				</ul>
+			</li>
+			<li>
+				<div>South America</div>
+				<ul>
+					<li><div>Columbia</div></li>
+					<li><div>Argentina</div></li>
+					<li><div>Brazil</div></li>
+					<li><div>Chile</div></li>
+					<li><div>Peru</div></li>
+					<li><div>Venezuela</div></li>
+				</ul>
+			</li>
+			<li>
+				<div>Oceania</div>
+				<ul>
+					<li><div>Austrailia</div></li>
+					<li><div>New kaledonia</div></li>
+					<li><div>New Zealand</div></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<div class="desc">
+		Written by Suchan Kim. MIT license.
+	</div>
+</body>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="src/jquery.treefilter.js"></script>
+<script>
+$(function() {
+	//트리 인터렉션 설정
+	var tree = new treefilter($("#my-tree"), {
+		searcher : $("input#my-search")
+	});
+});
+</script>
+</html>

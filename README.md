@@ -1,4 +1,4 @@
-#jquery-tree-filter
+#jQuery tree filter
 Endless folder tree with quick search.
 
 #demo

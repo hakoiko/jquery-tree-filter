@@ -1,12 +1,13 @@
-#jQuery tree filter
+# jQuery tree filter
 Endless folder tree with quick search.
 
-#demo
-[http://hakoiko.com/treefilter/](http://hakoiko.com/treefilter/)
+## this repository is no longer maintained
+I don't recommend to use this component in real production. jQuery is too old. there are better ways to making a tree component.
 
-##usage
+## Usage
 Basic Html Structure is UL > LI hierarchy.
 ```HTML
+	<input type text="my-search" />
 	<ul id="my-tree">
 		<li>
 			<div>Asia</div>
@@ -38,5 +39,5 @@ And, you need to import javascript files and setup your plug-in
 	</script>
 ```
 
-##License
+## License
 MIT License.
